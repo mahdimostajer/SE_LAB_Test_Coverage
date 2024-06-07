@@ -1,5 +1,6 @@
 # گزارش آزمایش
 
+لینک پروژه در گیتهاب: ‌https://github.com/mahdimostajer/SE_LAB_Test_Coverage
 ## بررسی test coverage در پروژه CodeCoverageProject
 
 اجرای تست‌ها با انتخاب گزینه Run Tests With Coverage
