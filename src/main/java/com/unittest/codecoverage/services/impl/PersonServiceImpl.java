@@ -43,7 +43,7 @@ public class PersonServiceImpl implements PersonService {
 
 	@Override
 	public void delete(String name) {
-		if(validator.requiredName(name)) {
+		if(!validator.requiredName(name)) {
 			throw new PersonException("Name is required"); 
 		}
 		repository.delete(name);

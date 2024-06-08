@@ -1,7 +1,7 @@
 package com.unittest.codecoverage.samples;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,6 +9,7 @@ import java.util.List;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.Spy;
 import org.mockito.junit.jupiter.MockitoExtension;
@@ -17,7 +18,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 public class SpySampleTest {
 	
 	@Spy
-	List<String> spyList = new ArrayList<>();
+	List<String> spyList = mock(ArrayList.class, withSettings().useConstructor().defaultAnswer(CALLS_REAL_METHODS));
 
 	@Test
 	@DisplayName("Verifies certain behavior happened at least once time.")
